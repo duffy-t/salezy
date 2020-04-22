@@ -15,6 +15,8 @@ import com.arkinfosys.salezy.service.system.SetupService;
  */
 @RestController
 public class SetupController {
+    /** セットアップユーザID. */
+    private static final String SETUP_USER_ID = "setup";
 
     /** セットアップサービス. */
     @Autowired
@@ -22,11 +24,10 @@ public class SetupController {
 
     @CrossOrigin
     @GetMapping(value="/salezy/setup")
-//    @RequestMapping(value="/salezy/setup", method=RequestMethod.GET)
-    public String execute(@RequestParam(name = "name", defaultValue = "") String name) {
+    public String execute(@RequestParam(name = "passwd", defaultValue = "") String passwd) {
         // 仮ユーザでセットアップする
         UserInfo userInfo = new UserInfo();
-        userInfo.setUserId("setup");
+        userInfo.setUserId(SETUP_USER_ID);
 
         try (RequestContext context = new RequestContext(userInfo)) {
             setupService.execute();
