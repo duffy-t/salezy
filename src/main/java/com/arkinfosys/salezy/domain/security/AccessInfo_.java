@@ -7,7 +7,7 @@ import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="Dali", date="2020-05-11T13:44:23.528+0900")
+@Generated(value="Dali", date="2020-05-11T13:53:37.063+0900")
 @StaticMetamodel(AccessInfo.class)
 public class AccessInfo_ extends BaseEntity_ {
 	public static volatile SingularAttribute<AccessInfo, String> accessKey;
