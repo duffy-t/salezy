@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.arkinfosys.salezy.domain.user.UserInfo;
 
 /**
- * ユーザ情報リポジトリ院テーフェイス.
+ * ユーザ情報リポジトリインターフェイス.
  */
 @Repository
 public interface UserInfoRepository extends JpaRepository<UserInfo, Long> {

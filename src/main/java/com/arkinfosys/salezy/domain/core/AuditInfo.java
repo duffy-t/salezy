@@ -3,7 +3,10 @@ package com.arkinfosys.salezy.domain.core;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
+
+import com.arkinfosys.salezy.domain.common.FieldSizeDef;
 
 /**
  * 監査情報クラス.
@@ -17,12 +20,14 @@ public class AuditInfo implements Serializable {
     private Timestamp creationTime;
 
     /** 作成ユーザID. */
+    @Column(length = FieldSizeDef.UserInfo.userId)
     private String creationUserId;
 
     /** 最終更新日時. */
     private Timestamp lastUpdateTime;
 
     /** 最終更新ユーザID. */
+    @Column(length = FieldSizeDef.UserInfo.userId)
     private String lastUpdateUserId;
 
     //---------- getter/setter -----------------------------------------------------------------------------------------
