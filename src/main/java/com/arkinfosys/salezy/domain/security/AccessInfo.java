@@ -1,6 +1,7 @@
 package com.arkinfosys.salezy.domain.security;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -34,6 +35,9 @@ public class AccessInfo extends BaseEntity implements Serializable {
     /** リモートIPアドレス. */
     @Column(length = FieldSizeDef.AccessInfo.remoteAddress)
     private String remoteAddress;
+
+    /** 登録日時. */
+    private Timestamp registrationTime;
 
     //---------- getter/setter -----------------------------------------------------------------------------------------
 
@@ -69,6 +73,14 @@ public class AccessInfo extends BaseEntity implements Serializable {
         this.remoteAddress = remoteAddress;
     }
 
+    public Timestamp getRegistrationTime() {
+        return registrationTime;
+    }
+
+    public void setRegistrationTime(Timestamp registrationTime) {
+        this.registrationTime = registrationTime;
+    }
+
     //---------- methods -----------------------------------------------------------------------------------------------
 
     /**
@@ -78,6 +90,12 @@ public class AccessInfo extends BaseEntity implements Serializable {
         // Nothing to do.
     }
 
+    /**
+     * 新規インスタンスを生成します.
+     * @param userInfo ユーザ情報
+     * @param remoteAddress リモートアドレス
+     * @return 新規アクセス情報インスタンス
+     */
     public static AccessInfo newInstance(UserInfo userInfo, String remoteAddress) {
         assert !Objects.isNull(userInfo);
         assert !Objects.isNull(remoteAddress);
@@ -87,6 +105,7 @@ public class AccessInfo extends BaseEntity implements Serializable {
         accInfo.setUsedCount(0);
         accInfo.setUserInfo(userInfo);
         accInfo.setRemoteAddress(remoteAddress);
+        accInfo.setRegistrationTime(new Timestamp(System.currentTimeMillis()));
 
         return accInfo;
     }
