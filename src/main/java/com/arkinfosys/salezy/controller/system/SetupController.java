@@ -30,13 +30,13 @@ public class SetupController {
         userInfo.setUserId(SETUP_USER_ID);
 
         try (RequestContext context = new RequestContext(userInfo)) {
-            setupService.execute();
+            setupService.execute(passwd);
 
             return "OK";
 
         } catch (Exception e) {
             e.printStackTrace();
-            return "NG";
+            return "NG:" + e.getMessage();
         }
     }
 }
