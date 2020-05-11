@@ -9,6 +9,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 
+import com.arkinfosys.salezy.common.utils.DateTimeUtils;
 import com.arkinfosys.salezy.domain.common.FieldSizeDef;
 import com.arkinfosys.salezy.domain.core.BaseEntity;
 import com.arkinfosys.salezy.domain.user.UserInfo;
@@ -105,7 +106,7 @@ public class AccessInfo extends BaseEntity implements Serializable {
         accInfo.setUsedCount(0);
         accInfo.setUserInfo(userInfo);
         accInfo.setRemoteAddress(remoteAddress);
-        accInfo.setRegistrationTime(new Timestamp(System.currentTimeMillis()));
+        accInfo.setRegistrationTime(DateTimeUtils.currentTimestamp());
 
         return accInfo;
     }
