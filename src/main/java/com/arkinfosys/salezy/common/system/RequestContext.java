@@ -1,6 +1,6 @@
 package com.arkinfosys.salezy.common.system;
 
-import com.arkinfosys.salezy.domain.user.UserInfo;
+import com.arkinfosys.salezy.domain.entity.user.UserInfo;
 
 /**
  * リクエストコンテキストクラス.

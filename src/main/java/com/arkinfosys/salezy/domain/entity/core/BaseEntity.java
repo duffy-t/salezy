@@ -1,4 +1,4 @@
-package com.arkinfosys.salezy.domain.core;
+package com.arkinfosys.salezy.domain.entity.core;
 
 import java.io.Serializable;
 

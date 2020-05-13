@@ -1,4 +1,4 @@
-package com.arkinfosys.salezy.domain.user;
+package com.arkinfosys.salezy.domain.entity.user;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -10,7 +10,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.arkinfosys.salezy.domain.common.Encryption;
 import com.arkinfosys.salezy.domain.common.FieldSizeDef;
-import com.arkinfosys.salezy.domain.core.BaseEntity;
+import com.arkinfosys.salezy.domain.entity.core.BaseEntity;
 
 /**
  * ユーザ情報クラス.

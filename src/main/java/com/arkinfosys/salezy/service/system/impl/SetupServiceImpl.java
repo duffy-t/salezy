@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.arkinfosys.salezy.common.exception.ServiceException;
-import com.arkinfosys.salezy.domain.user.UserInfo;
+import com.arkinfosys.salezy.domain.entity.user.UserInfo;
 import com.arkinfosys.salezy.repository.user.UserInfoRepository;
 import com.arkinfosys.salezy.service.system.SetupService;
 

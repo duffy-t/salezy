@@ -5,7 +5,7 @@ import javax.persistence.PreUpdate;
 
 import com.arkinfosys.salezy.common.system.RequestContext;
 import com.arkinfosys.salezy.common.utils.DateTimeUtils;
-import com.arkinfosys.salezy.domain.core.BaseEntity;
+import com.arkinfosys.salezy.domain.entity.core.BaseEntity;
 
 /**
  * ベースエンティティリスナクラス.

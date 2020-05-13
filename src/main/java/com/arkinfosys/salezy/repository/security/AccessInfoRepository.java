@@ -3,7 +3,7 @@ package com.arkinfosys.salezy.repository.security;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.arkinfosys.salezy.domain.security.AccessInfo;
+import com.arkinfosys.salezy.domain.entity.security.AccessInfo;
 
 /**
  * アクセス情報インターフェイス.

@@ -1,4 +1,4 @@
-package com.arkinfosys.salezy.domain.security;
+package com.arkinfosys.salezy.domain.entity.security;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -11,8 +11,8 @@ import javax.persistence.OneToOne;
 
 import com.arkinfosys.salezy.common.utils.DateTimeUtils;
 import com.arkinfosys.salezy.domain.common.FieldSizeDef;
-import com.arkinfosys.salezy.domain.core.BaseEntity;
-import com.arkinfosys.salezy.domain.user.UserInfo;
+import com.arkinfosys.salezy.domain.entity.core.BaseEntity;
+import com.arkinfosys.salezy.domain.entity.user.UserInfo;
 
 /**
  * アクセス情報クラス.

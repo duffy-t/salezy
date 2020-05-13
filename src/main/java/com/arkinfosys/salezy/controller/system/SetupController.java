@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.arkinfosys.salezy.common.system.RequestContext;
-import com.arkinfosys.salezy.domain.user.UserInfo;
+import com.arkinfosys.salezy.domain.entity.user.UserInfo;
 import com.arkinfosys.salezy.service.system.SetupService;
 
 /**
